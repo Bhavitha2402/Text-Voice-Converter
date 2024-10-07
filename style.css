@@ -1,60 +1,87 @@
-*{
-    border:0;
-    margin:0;
+* {
+    border: 0;
+    margin: 0;
+    box-sizing: border-box; /* Ensure padding and borders are included in element's total width and height */
 }
-body{
+
+body {
     background-color: #D7C3F1;
 }
-.container{
-    width:500px;
-    margin-left:  35%;
-    margin-top: 160px;
+
+.container {
+    width: 90%; /* Use percentage for width */
+    max-width: 500px; /* Set a max-width for larger screens */
+    margin: 160px auto; /* Center the container horizontally */
     display: flex;
     justify-content: center;
     min-height: 50vh;
     border-radius: 10px;
+    padding: 20px; /* Add some padding */
 }
-.Translator{
-width:100%;
+
+.Translator {
+    width: 100%;
 }
-.Translator h2{
+
+.Translator h2 {
     text-align: center;
-    font-size: 45px;
+    font-size: 2.5rem; /* Use rem for scalable font sizes */
 }
-.Translator textarea{
-    width:100%;
-    height:40vh;
+
+.Translator textarea {
+    width: 100%;
+    height: 40vh;
     border-radius: 10px;
     margin-top: 2rem;
-    opacity:0.7 ;
-    font-size: 25px;
+    opacity: 0.7;
+    font-size: 1.5rem; /* Use rem for scalable font sizes */
 }
-.clickbtn{
+
+.clickbtn {
     display: flex;
     justify-content: space-between;
     margin-top: 10px;
 }
-.clickbtn select{
-    width:100%;
-    height:2rem;
+
+.clickbtn select {
+    width: 100%;
+    height: 2rem;
     border-radius: 10px;
-    opacity:0.7 ;
-     
+    opacity: 0.7;
 }
-.btn{
+
+.btn {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
-    width:135px;
-    height:2rem;
+    width: 135px;
+    height: 2rem;
     margin-left: 3px;
     border-radius: 10px;
-    background-color:#03346E;
-    color:white;
+    background-color: #03346E;
+    color: white;
     font-size: 1rem;
     text-align: center;
 }
-.btn img{
-    height:4vh;
-    width:4vh;
+
+.btn img {
+    height: 4vh;
+    width: 4vh;
+}
+
+/* Media Queries */
+@media (max-width: 600px) {
+    .Translator h2 {
+        font-size: 2rem; /* Smaller font size for mobile */
+    }
+
+    .Translator textarea {
+        height: 30vh; /* Reduce height for smaller screens */
+        font-size: 1.2rem; /* Smaller font size for textarea */
+    }
+
+    .btn {
+        width: 100%; /* Full width buttons on mobile */
+        height: 2.5rem; /* Increase height for touch-friendly interface */
+    }
 }
